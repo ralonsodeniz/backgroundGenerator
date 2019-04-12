@@ -26,21 +26,63 @@
   </head>
   <body>
     <h1>Background Generator</h1>
-    <input
-      class="firstColor"
-      type="color"
-      name="color1"
-      value="#00ff00"
-      id=""
-    />
-    <input
-      class="secondColor"
-      type="color"
-      name="color2"
-      value="#ff0000"
-      id=""
-    />
-    <input type="button" value="Random Background" id="randomButton" />
+    <form id="backgroundGenerator">
+      <p>choose colors</p>
+      <input
+        class="firstColor"
+        type="color"
+        name="color1"
+        value="#111111"
+        id=""
+      />
+      <input
+        class="secondColor"
+        type="color"
+        name="color2"
+        value="#111111"
+        id=""
+      />
+      <p>choose alpha fron 0 to 1</p>
+      <input
+        type="number"
+        name="alpha1"
+        id="alphaFirstColor"
+        min="0"
+        max="1"
+        value="1"
+        placeholder="alpha"
+      />
+      <input
+        type="number"
+        name="alpha2"
+        id="alphaSecondColor"
+        min="0"
+        max="1"
+        value="1"
+        placeholder="alpha"
+      />
+      <p>choose gradient direction</p>
+      <select id="direction">
+        <option value="to bottom">to bottom</option>
+        <option value="to top">to top</option>
+        <option value="to right">to right</option>
+        <option value="to left">to left</option>
+        <option value="to bottom right">to bottom right</option>
+        <option value="to bottom left">to bottom left</option>
+        <option value="angle">angle</option>
+      </select>
+      <input
+        type="number"
+        name="angle"
+        id="angle"
+        min="-360"
+        max="360"
+        disabled
+        placeholder="angle"
+      />
+      <p>generate random gradient</p>
+      <input type="button" value="random" id="randomButton" />
+    </form>
     <h2>Current CSS Background</h2>
     <h3></h3>
     <!-- Bootstrap JavaScript - jQuery first, then Popper.js, then Bootstrap JS -->
